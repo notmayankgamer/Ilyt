@@ -1,0 +1,91 @@
+body {
+    text-align: center;
+    background: linear-gradient(to bottom, #ff69b4, #ff1493);
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto; /* Ensures the page remains scrollable */
+}
+
+/* Glowing Text */
+.glowing-text {
+    font-size: 32px;
+    text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px pink;
+    margin-top: 20px;
+}
+
+/* Slideshow */
+.slideshow-container {
+    width: 80%;
+    max-width: 400px;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px white;
+}
+
+.slide {
+    display: none;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Love Button */
+.love-button {
+    margin-top: 20px;
+    background-color: red;
+    color: white;
+    padding: 15px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.love-button:hover {
+    background-color: darkred;
+}
+
+/* Love Message Box */
+.love-box {
+    margin-top: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    text-shadow: 0 0 10px white;
+    font-size: 18px;
+    width: 80%;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Falling Hearts Effect */
+.hearts-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    pointer-events: none;
+    z-index: -1;
+}
+
+@keyframes fall {
+    0% { transform: translateY(-10vh) scale(0.5); opacity: 1; }
+    100% { transform: translateY(100vh) scale(1); opacity: 0; }
+}
+
+.heart {
+    position: fixed;
+    color: red;
+    font-size: 24px;
+    animation: fall 4s linear infinite;
+}
